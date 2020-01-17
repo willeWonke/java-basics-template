@@ -81,7 +81,14 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public long calcFactorial(int initialVal) {
-        return -1L;
+        int factorial = 1;
+        if (initialVal == 0) {
+            return factorial;
+        }
+        for (int i = 1;i <= initialVal;i++) {
+            factorial = factorial * i;
+        }
+        return factorial;
     }
 
     /**
